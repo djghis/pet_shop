@@ -72,4 +72,5 @@
 
 
 # p @pet_shop[:pets].count
-p @customers[0][:cash]
+# p @customers[0][:cash]
+p @pet_shop[:pets][0][:breed]

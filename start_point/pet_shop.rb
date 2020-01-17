@@ -12,7 +12,7 @@ end
 
 
 def add_or_remove_cash(from, amount)
-from[:admin][:total_cash] += amount
+  from[:admin][:total_cash] += amount
 end
 
 def pets_sold(pet_sold)
@@ -20,7 +20,7 @@ def pets_sold(pet_sold)
 end
 #
 def increase_pets_sold(from, number_of_pet_sold)
-from[:admin][:pets_sold] += number_of_pet_sold
+  from[:admin][:pets_sold] += number_of_pet_sold
 end
 
 def stock_count(pets)
@@ -28,16 +28,21 @@ def stock_count(pets)
 
 end
 #
-# def all_pets_by_breed(pets, breed)
-#   total = 0
+# def pets_by_breed(pets, breed)
+#   breed_name = []
 #   for pet in pets
-#     total += pet[:pets][:breed]
+#     if pet[:pets][1][:breed] = breed
+#       breed_name.push(pet[:pets][1][:name])
+#     end
 #   end
-#
-#   return total
+#   return breed_name
 #
 # end
 
 # def customer_cash(cash)
 #   return cash[:cash]
 # end
+
+def add_pet_to_stock(to, from)
+  to[:pets].push(from)
+end
