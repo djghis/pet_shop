@@ -69,8 +69,33 @@
   name: "Camelot of Pets"
 }
 
-
+breeds_array = []
+for pet in @pet_shop[:pets]
+  if breed == pet[:breed]
+    breeds_array.push(breed)
+  end
+end
+p breeds_array
 
 # p @pet_shop[:pets].count
 # p @customers[0][:cash]
-p @pet_shop[:pets][0][:breed]
+# p @pet_shop[:pets][0][:breed]
+# p @pet_shop[:pets].tally("British Shorthair")
+# p @pet_shop[:pets][0][:breed].group_by(&:itself).transform_values(&:count)
+# def pets_by_breed(pets(@pet_shop), breed("Dalmation"))
+#   # breed_name = []
+#   # for pet in pets
+#   #   if pet[:pets][1][:breed] = breed
+#   #     breed_name.push(pet[:pets][1][:name])
+#   #   end
+#   # end
+#   # return breed_name
+#   #def pets_by_breed(pet_shop, breed)
+#
+# p  breed_array = []
+#   for pet in pets
+#      if breed == pets[:pets]
+#        breed_array.unshift(pets[:pets])
+#      return breed_array
+#
+# end
